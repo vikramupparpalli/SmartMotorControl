@@ -1,0 +1,118 @@
+net CPUSS_swj_swclk_tclk
+	term   ":ioport6:pin7.fb"
+	switch ":ioport6:pin7.fb==>:ioport6:smartio_mux_out7.direct_in"
+	switch ":ioport6:smartio_mux_out7.smartio_mux_out==>:ioport6:hsiomIn7.hsiomIn7"
+	switch ":ioport6:hsiomIn7.fixedOut7_DPSLP_5==>:CPUSS[0]swj_swclk_tclk_input_permute.ioport6_fixedOut7_DPSLP_5"
+	switch ":CPUSS[0]swj_swclk_tclk_input_permute.CPUSS[0]swj_swclk_tclk==>:CPUSScontainer:CPUSS[0].swj_swclk_tclk"
+	term   ":CPUSScontainer:CPUSS[0].swj_swclk_tclk"
+end CPUSS_swj_swclk_tclk
+net CPUSS_swj_swdio_tms
+	term   ":ioport6:pin6.fb"
+	switch ":ioport6:pin6.fb==>:ioport6:smartio_mux_out6.direct_in"
+	switch ":ioport6:smartio_mux_out6.smartio_mux_out==>:ioport6:hsiomIn6.hsiomIn6"
+	switch ":ioport6:hsiomIn6.fixedOut6_DPSLP_5==>:CPUSS[0]swj_swdio_tms_input_permute.ioport6_fixedOut6_DPSLP_5"
+	switch ":CPUSS[0]swj_swdio_tms_input_permute.CPUSS[0]swj_swdio_tms==>:CPUSScontainer:CPUSS[0].swj_swdio_tms"
+	term   ":CPUSScontainer:CPUSS[0].swj_swdio_tms"
+end CPUSS_swj_swdio_tms
+net Net_18
+	term   ":TCPWMcontainer:TCPWM[0].interrupt"
+	switch ":TCPWMcontainer:TCPWM[0].interrupt==>:intc_0:interrupt90.interrupt"
+	term   ":intc_0:interrupt90.interrupt"
+end Net_18
+net Net_22_ff14
+	term   ":Clockcontainer:Clock[0].ff_div_11"
+	switch ":Clockcontainer:Clock[0].ff_div_11==>:Clockcontainer:ff_permute.ff_div_11"
+	switch ":Clockcontainer:ff_permute.Clock[0]ff_div_19==>:TCPWMcontainer:TCPWM[0].clock"
+	term   ":TCPWMcontainer:TCPWM[0].clock"
+end Net_22_ff14
+net Net_42_ff11
+	term   ":Clockcontainer:Clock[0].ff_div_15"
+	switch ":Clockcontainer:Clock[0].ff_div_15==>:Clockcontainer:ff_permute.ff_div_15"
+	switch ":Clockcontainer:ff_permute.Clock[0]ff_div_23==>:TCPWMcontainer:TCPWM[4].clock"
+	term   ":TCPWMcontainer:TCPWM[4].clock"
+end Net_42_ff11
+net Net_45
+	term   ":TCPWMcontainer:TCPWM[4].line"
+	switch ":TCPWMcontainer:TCPWM[4].line==>:ioport9:hsiomOut0.fixedIn0_ACT_0"
+	switch ":ioport9:hsiomOut0.hsiomOut0==>:ioport9:smartio_mux_in0.direct_out"
+	switch ":ioport9:smartio_mux_in0.smartio_mux_in==>:ioport9:pin0.pin_input"
+	term   ":ioport9:pin0.pin_input"
+end Net_45
+net Net_48_ff13
+	term   ":Clockcontainer:Clock[0].ff_div_13"
+	switch ":Clockcontainer:Clock[0].ff_div_13==>:Clockcontainer:ff_permute.ff_div_13"
+	switch ":Clockcontainer:ff_permute.Clock[0]ff_div_21==>:TCPWMcontainer:TCPWM[2].clock"
+	term   ":TCPWMcontainer:TCPWM[2].clock"
+end Net_48_ff13
+net Net_54
+	term   ":TCPWMcontainer:TCPWM[2].line"
+	switch ":TCPWMcontainer:TCPWM[2].line==>:ioport8:hsiomOut4.fixedIn4_ACT_0"
+	switch ":ioport8:hsiomOut4.hsiomOut4==>:ioport8:smartio_mux_in4.direct_out"
+	switch ":ioport8:smartio_mux_in4.smartio_mux_in==>:ioport8:pin4.pin_input"
+	term   ":ioport8:pin4.pin_input"
+end Net_54
+net Net_68_ff12
+	term   ":Clockcontainer:Clock[0].ff_div_12"
+	switch ":Clockcontainer:Clock[0].ff_div_12==>:Clockcontainer:ff_permute.ff_div_12"
+	switch ":Clockcontainer:ff_permute.Clock[0]ff_div_20==>:TCPWMcontainer:TCPWM[1].clock"
+	term   ":TCPWMcontainer:TCPWM[1].clock"
+end Net_68_ff12
+net Net_74
+	term   ":TCPWMcontainer:TCPWM[1].line"
+	switch ":TCPWMcontainer:TCPWM[1].line==>:ioport8:hsiomOut2.fixedIn2_ACT_0"
+	switch ":ioport8:hsiomOut2.hsiomOut2==>:ioport8:smartio_mux_in2.direct_out"
+	switch ":ioport8:smartio_mux_in2.smartio_mux_in==>:ioport8:pin2.pin_input"
+	term   ":ioport8:pin2.pin_input"
+end Net_74
+net \ExternalUart:Net_1172\
+	term   ":ioport5:pin0.fb"
+	switch ":ioport5:pin0.fb==>:ioport5:smartio_mux_out0.direct_in"
+	switch ":ioport5:smartio_mux_out0.smartio_mux_out==>:ioport5:hsiomIn0.hsiomIn0"
+	switch ":ioport5:hsiomIn0.fixedOut0_ACT_6==>:SCB[5]uart_rx_input_permute.ioport5_fixedOut0_ACT_6"
+	switch ":SCB[5]uart_rx_input_permute.SCB[5]uart_rx==>:SCBcontainer:SCB[5].uart_rx"
+	term   ":SCBcontainer:SCB[5].uart_rx"
+end \ExternalUart:Net_1172\
+net \ExternalUart:Net_847_ff1\
+	term   ":Clockcontainer:Clock[0].ff_div_5"
+	switch ":Clockcontainer:Clock[0].ff_div_5==>:Clockcontainer:ff_permute.ff_div_5"
+	switch ":Clockcontainer:ff_permute.Clock[0]ff_div_5==>:SCBcontainer:SCB[5].clock"
+	term   ":SCBcontainer:SCB[5].clock"
+end \ExternalUart:Net_847_ff1\
+net \ExternalUart:intr_wire\
+	term   ":SCBcontainer:SCB[5].interrupt"
+	switch ":SCBcontainer:SCB[5].interrupt==>:intc_0:interrupt46.interrupt"
+	term   ":intc_0:interrupt46.interrupt"
+end \ExternalUart:intr_wire\
+net \ExternalUart:tx_wire\
+	term   ":SCBcontainer:SCB[5].uart_tx"
+	switch ":SCBcontainer:SCB[5].uart_tx==>:ioport5:hsiomOut1.fixedIn1_ACT_6"
+	switch ":ioport5:hsiomOut1.hsiomOut1==>:ioport5:smartio_mux_in1.direct_out"
+	switch ":ioport5:smartio_mux_in1.smartio_mux_in==>:ioport5:pin1.pin_input"
+	term   ":ioport5:pin1.pin_input"
+end \ExternalUart:tx_wire\
+net \LidarUart:Net_1172\
+	term   ":ioport8:pin0.fb"
+	switch ":ioport8:pin0.fb==>:ioport8:smartio_mux_out0.direct_in"
+	switch ":ioport8:smartio_mux_out0.smartio_mux_out==>:ioport8:hsiomIn0.hsiomIn0"
+	switch ":ioport8:hsiomIn0.fixedOut0_ACT_6==>:SCB[4]uart_rx_input_permute.ioport8_fixedOut0_ACT_6"
+	switch ":SCB[4]uart_rx_input_permute.SCB[4]uart_rx==>:SCBcontainer:SCB[4].uart_rx"
+	term   ":SCBcontainer:SCB[4].uart_rx"
+end \LidarUart:Net_1172\
+net \LidarUart:Net_847_ff0\
+	term   ":Clockcontainer:Clock[0].ff_div_4"
+	switch ":Clockcontainer:Clock[0].ff_div_4==>:Clockcontainer:ff_permute.ff_div_4"
+	switch ":Clockcontainer:ff_permute.Clock[0]ff_div_4==>:SCBcontainer:SCB[4].clock"
+	term   ":SCBcontainer:SCB[4].clock"
+end \LidarUart:Net_847_ff0\
+net \LidarUart:intr_wire\
+	term   ":SCBcontainer:SCB[4].interrupt"
+	switch ":SCBcontainer:SCB[4].interrupt==>:intc_0:interrupt45.interrupt"
+	term   ":intc_0:interrupt45.interrupt"
+end \LidarUart:intr_wire\
+net \LidarUart:tx_wire\
+	term   ":SCBcontainer:SCB[4].uart_tx"
+	switch ":SCBcontainer:SCB[4].uart_tx==>:ioport8:hsiomOut1.fixedIn1_ACT_6"
+	switch ":ioport8:hsiomOut1.hsiomOut1==>:ioport8:smartio_mux_in1.direct_out"
+	switch ":ioport8:smartio_mux_in1.smartio_mux_in==>:ioport8:pin1.pin_input"
+	term   ":ioport8:pin1.pin_input"
+end \LidarUart:tx_wire\

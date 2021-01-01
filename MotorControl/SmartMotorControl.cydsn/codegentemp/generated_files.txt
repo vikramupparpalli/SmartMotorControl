@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="us-ascii"?>
+
+<fileSet version="1" anchorPath="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp" xsi:schemaLocation="http://cypress.com/xsd/cypathdictionary cypathdictionary.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://cypress.com/xsd/cypathdictionary">
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\cyfitter_cfg.h" value="HEADER;;;;;" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\cyfitter_sysint_cfg.h" value="HEADER;;;;;Pins and Interrupts" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\cyfitter_sysint_cfg.c" value="SOURCE_C;CortexM0p,CortexM4;;;;Pins and Interrupts" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\cyfitter_cfg.c" value="SOURCE_C;CortexM0p;;;;" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\cymetadata.c" value="SOURCE_C;CortexM0p,CortexM4;;;;" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\cydevice_trm.h" value="HEADER;;;;;" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\cydevicegnu_trm.inc" value="HEADER;;;;;" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\cydevicerv_trm.inc" value="HEADER;;;;;" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\cydeviceiar_trm.inc" value="HEADER;;;;;" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\cyfitter.h" value="HEADER;;;;;" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\cyfitter_gpio.h" value="HEADER;;;;;Pins and Interrupts" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\cyfitter_sysint.h" value="HEADER;;;;;Pins and Interrupts" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\cydisabledsheets.h" value="HEADER;;;;;" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\PeriodicTimer.c" value="SOURCE_C;CortexM0p,CortexM4;;;;PeriodicTimer" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\PeriodicTimer.h" value="HEADER;;;;;PeriodicTimer" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\Clock.h" value="HEADER;;;;;Clock" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\MotorSpeedControl.c" value="SOURCE_C;CortexM0p,CortexM4;;;;MotorSpeedControl" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\MotorSpeedControl.h" value="HEADER;;;;;MotorSpeedControl" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\SpeedClock.h" value="HEADER;;;;;SpeedClock" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\ServoControl.c" value="SOURCE_C;CortexM0p,CortexM4;;;;ServoControl" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\ServoControl.h" value="HEADER;;;;;ServoControl" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\ServoClock.h" value="HEADER;;;;;ServoClock" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\LidarMotorControl.c" value="SOURCE_C;CortexM0p,CortexM4;;;;LidarMotorControl" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\LidarMotorControl.h" value="HEADER;;;;;LidarMotorControl" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\LidarMotorClock.h" value="HEADER;;;;;LidarMotorClock" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\ExternalUart.c" value="SOURCE_C;CortexM0p,CortexM4;;;;ExternalUart" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\ExternalUart.h" value="HEADER;;;;;ExternalUart" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\LidarUart.c" value="SOURCE_C;CortexM0p,CortexM4;;;;LidarUart" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\LidarUart.h" value="HEADER;;;;;LidarUart" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\ExternalUart_SCBCLK.h" value="HEADER;;;;;ExternalUart_SCBCLK" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\LidarUart_SCBCLK.h" value="HEADER;;;;;LidarUart_SCBCLK" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\project.h" value="OTHER;;;;;" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\cycodeshareimport.ld" value="OTHER;;;;;" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\cycodeshareexport.ld" value="OTHER;;;;;" />
+  <file name="D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\codegentemp\cycodeshareimport.scat" value="OTHER;;;;;" />
+</fileSet>

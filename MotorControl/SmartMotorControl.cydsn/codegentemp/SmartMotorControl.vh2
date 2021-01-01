@@ -1,0 +1,630 @@
+--
+--	Conversion of SmartMotorControl.v to vh2:
+--
+--	Cypress Semiconductor - WARP Version 6.3 IR 41
+--	Fri Jan 01 14:12:52 2021
+--
+
+USE cypress.cypress.all;
+USE cypress.rtlpkg.all;
+ENTITY top_RTL IS
+ATTRIBUTE part_name of top_RTL:TYPE IS "cpsoc3";
+END top_RTL;
+--------------------------------------------------------
+ARCHITECTURE R_T_L OF top_RTL IS
+SIGNAL Net_22 : bit;
+SIGNAL \PeriodicTimer:capture\ : bit;
+SIGNAL \PeriodicTimer:count\ : bit;
+SIGNAL \PeriodicTimer:reload\ : bit;
+SIGNAL \PeriodicTimer:stop\ : bit;
+SIGNAL \PeriodicTimer:start\ : bit;
+SIGNAL Net_32 : bit;
+SIGNAL Net_26 : bit;
+SIGNAL Net_28 : bit;
+SIGNAL \PeriodicTimer:Net_1\ : bit;
+SIGNAL \PeriodicTimer:Net_2\ : bit;
+SIGNAL Net_18 : bit;
+SIGNAL Net_42 : bit;
+SIGNAL \MotorSpeedControl:swap\ : bit;
+SIGNAL \MotorSpeedControl:count\ : bit;
+SIGNAL \MotorSpeedControl:reload\ : bit;
+SIGNAL \MotorSpeedControl:kill\ : bit;
+SIGNAL \MotorSpeedControl:start\ : bit;
+SIGNAL Net_40 : bit;
+SIGNAL Net_41 : bit;
+SIGNAL Net_39 : bit;
+SIGNAL Net_44 : bit;
+SIGNAL Net_45 : bit;
+SIGNAL Net_38 : bit;
+SIGNAL one : bit;
+SIGNAL tmpFB_0__DcMotorSpeed_net_0 : bit;
+SIGNAL tmpIO_0__DcMotorSpeed_net_0 : bit;
+TERMINAL tmpSIOVREF__DcMotorSpeed_net_0 : bit;
+SIGNAL Net_48 : bit;
+SIGNAL \ServoControl:swap\ : bit;
+SIGNAL \ServoControl:count\ : bit;
+SIGNAL \ServoControl:reload\ : bit;
+SIGNAL \ServoControl:kill\ : bit;
+SIGNAL \ServoControl:start\ : bit;
+SIGNAL Net_59 : bit;
+SIGNAL Net_49 : bit;
+SIGNAL Net_53 : bit;
+SIGNAL Net_55 : bit;
+SIGNAL Net_54 : bit;
+SIGNAL Net_51 : bit;
+SIGNAL tmpFB_0__ServoPositionControl_net_0 : bit;
+SIGNAL tmpIO_0__ServoPositionControl_net_0 : bit;
+TERMINAL tmpSIOVREF__ServoPositionControl_net_0 : bit;
+SIGNAL Net_68 : bit;
+SIGNAL \LidarMotorControl:swap\ : bit;
+SIGNAL \LidarMotorControl:count\ : bit;
+SIGNAL \LidarMotorControl:reload\ : bit;
+SIGNAL \LidarMotorControl:kill\ : bit;
+SIGNAL \LidarMotorControl:start\ : bit;
+SIGNAL Net_79 : bit;
+SIGNAL Net_69 : bit;
+SIGNAL Net_73 : bit;
+SIGNAL Net_75 : bit;
+SIGNAL Net_74 : bit;
+SIGNAL Net_71 : bit;
+SIGNAL tmpFB_0__LidarMotorSpeed_net_0 : bit;
+SIGNAL tmpIO_0__LidarMotorSpeed_net_0 : bit;
+TERMINAL tmpSIOVREF__LidarMotorSpeed_net_0 : bit;
+SIGNAL zero : bit;
+SIGNAL tmpFB_0__DirectionInput1_net_0 : bit;
+SIGNAL tmpIO_0__DirectionInput1_net_0 : bit;
+TERMINAL tmpSIOVREF__DirectionInput1_net_0 : bit;
+SIGNAL tmpFB_0__DirectionInput2_net_0 : bit;
+SIGNAL tmpIO_0__DirectionInput2_net_0 : bit;
+TERMINAL tmpSIOVREF__DirectionInput2_net_0 : bit;
+SIGNAL \ExternalUart:Net_847\ : bit;
+SIGNAL \ExternalUart:clock_wire\ : bit;
+SIGNAL \ExternalUart:Net_22\ : bit;
+SIGNAL \ExternalUart:Net_23\ : bit;
+SIGNAL \ExternalUart:tx_wire\ : bit;
+SIGNAL \ExternalUart:tmpFB_0__tx_net_0\ : bit;
+SIGNAL \ExternalUart:tmpIO_0__tx_net_0\ : bit;
+TERMINAL \ExternalUart:tmpSIOVREF__tx_net_0\ : bit;
+SIGNAL \ExternalUart:Net_1172\ : bit;
+SIGNAL \ExternalUart:tmpIO_0__rx_net_0\ : bit;
+TERMINAL \ExternalUart:tmpSIOVREF__rx_net_0\ : bit;
+SIGNAL \ExternalUart:rx_wire\ : bit;
+SIGNAL \ExternalUart:cts_wire\ : bit;
+SIGNAL \ExternalUart:intr_wire\ : bit;
+SIGNAL \ExternalUart:rts_wire\ : bit;
+SIGNAL \ExternalUart:tx_en_wire\ : bit;
+SIGNAL \ExternalUart:Net_145\ : bit;
+SIGNAL \ExternalUart:Net_146\ : bit;
+SIGNAL \ExternalUart:Net_154\ : bit;
+SIGNAL \ExternalUart:Net_155_3\ : bit;
+SIGNAL \ExternalUart:Net_155_2\ : bit;
+SIGNAL \ExternalUart:Net_155_1\ : bit;
+SIGNAL \ExternalUart:Net_155_0\ : bit;
+SIGNAL \ExternalUart:Net_156\ : bit;
+SIGNAL \ExternalUart:Net_157\ : bit;
+SIGNAL Net_95 : bit;
+SIGNAL Net_94 : bit;
+SIGNAL \ExternalUart:Net_161\ : bit;
+SIGNAL Net_92 : bit;
+SIGNAL Net_91 : bit;
+SIGNAL Net_97 : bit;
+SIGNAL Net_98 : bit;
+SIGNAL Net_90 : bit;
+SIGNAL \LidarUart:Net_847\ : bit;
+SIGNAL \LidarUart:clock_wire\ : bit;
+SIGNAL \LidarUart:Net_22\ : bit;
+SIGNAL \LidarUart:Net_23\ : bit;
+SIGNAL \LidarUart:tx_wire\ : bit;
+SIGNAL \LidarUart:tmpFB_0__tx_net_0\ : bit;
+SIGNAL \LidarUart:tmpIO_0__tx_net_0\ : bit;
+TERMINAL \LidarUart:tmpSIOVREF__tx_net_0\ : bit;
+SIGNAL \LidarUart:Net_1172\ : bit;
+SIGNAL \LidarUart:tmpIO_0__rx_net_0\ : bit;
+TERMINAL \LidarUart:tmpSIOVREF__rx_net_0\ : bit;
+SIGNAL \LidarUart:rx_wire\ : bit;
+SIGNAL \LidarUart:cts_wire\ : bit;
+SIGNAL \LidarUart:intr_wire\ : bit;
+SIGNAL \LidarUart:rts_wire\ : bit;
+SIGNAL \LidarUart:tx_en_wire\ : bit;
+SIGNAL \LidarUart:Net_145\ : bit;
+SIGNAL \LidarUart:Net_146\ : bit;
+SIGNAL \LidarUart:Net_154\ : bit;
+SIGNAL \LidarUart:Net_155_3\ : bit;
+SIGNAL \LidarUart:Net_155_2\ : bit;
+SIGNAL \LidarUart:Net_155_1\ : bit;
+SIGNAL \LidarUart:Net_155_0\ : bit;
+SIGNAL \LidarUart:Net_156\ : bit;
+SIGNAL \LidarUart:Net_157\ : bit;
+SIGNAL Net_105 : bit;
+SIGNAL Net_104 : bit;
+SIGNAL \LidarUart:Net_161\ : bit;
+SIGNAL Net_102 : bit;
+SIGNAL Net_101 : bit;
+SIGNAL Net_107 : bit;
+SIGNAL Net_108 : bit;
+SIGNAL Net_100 : bit;
+BEGIN
+
+one <=  ('1') ;
+
+zero <=  ('0') ;
+
+\PeriodicTimer:TCPWM\:cy_mxs40_tcpwm_v1_0
+	GENERIC MAP(cy_registers=>"",
+		width=>16,
+		exact_width=>'0')
+	PORT MAP(clock=>Net_22,
+		capture=>zero,
+		count=>one,
+		reload=>zero,
+		stop=>zero,
+		start=>zero,
+		tr_underflow=>Net_32,
+		tr_compare_match=>Net_26,
+		tr_overflow=>Net_28,
+		line_compl=>\PeriodicTimer:Net_1\,
+		line=>\PeriodicTimer:Net_2\,
+		interrupt=>Net_18);
+Clock:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"0ae7b314-91e8-4a7f-b433-100d762aa3b9",
+		source_clock_id=>"2FB4EC85-8328-4C5A-9ED9-8B63060178EB",
+		divisor=>0,
+		period=>"1000000000000",
+		is_direct=>'0',
+		is_digital=>'0')
+	PORT MAP(clock_out=>Net_22,
+		dig_domain_out=>open);
+OneMsInterrupt:cy_mxs40_isr_v1_0
+	GENERIC MAP(cy_registers=>"",
+		deepsleep_required=>'0',
+		int_type=>"10")
+	PORT MAP(int_signal=>Net_18);
+\MotorSpeedControl:TCPWM\:cy_mxs40_tcpwm_v1_0
+	GENERIC MAP(cy_registers=>"",
+		width=>16,
+		exact_width=>'0')
+	PORT MAP(clock=>Net_42,
+		capture=>zero,
+		count=>one,
+		reload=>zero,
+		stop=>zero,
+		start=>zero,
+		tr_underflow=>Net_40,
+		tr_compare_match=>Net_41,
+		tr_overflow=>Net_39,
+		line_compl=>Net_44,
+		line=>Net_45,
+		interrupt=>Net_38);
+DcMotorSpeed:cy_mxs40_gpio_v1_0
+	GENERIC MAP(cy_registers=>"",
+		width=>1,
+		sio_grp_cnt=>0,
+		id=>"a61270bc-07ec-447d-ac9e-34cfe85c30e9",
+		drive_mode=>"6",
+		ibuf_enabled=>"0",
+		init_dr_st=>"1",
+		input_sync=>"0",
+		intr_mode=>"0",
+		io_voltage=>"",
+		output_conn=>"1",
+		oe_conn=>"0",
+		output_sync=>"0",
+		oe_sync=>"0",
+		drive_strength=>"0",
+		max_frequency=>"100",
+		output_current_cap=>"8",
+		i2c_mode=>"0",
+		pin_aliases=>"",
+		pin_mode=>"O",
+		slew_rate=>"0",
+		vtrip=>"0",
+		use_annotation=>"0",
+		hotswap_needed=>"0")
+	PORT MAP(oe=>(one),
+		y=>Net_45,
+		fb=>(tmpFB_0__DcMotorSpeed_net_0),
+		analog=>(open),
+		io=>(tmpIO_0__DcMotorSpeed_net_0),
+		annotation=>(open),
+		siovref=>(tmpSIOVREF__DcMotorSpeed_net_0));
+SpeedClock:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"18eadf7d-473c-4f95-a5b0-e663592bc737",
+		source_clock_id=>"2FB4EC85-8328-4C5A-9ED9-8B63060178EB",
+		divisor=>0,
+		period=>"1000000000",
+		is_direct=>'0',
+		is_digital=>'0')
+	PORT MAP(clock_out=>Net_42,
+		dig_domain_out=>open);
+\ServoControl:TCPWM\:cy_mxs40_tcpwm_v1_0
+	GENERIC MAP(cy_registers=>"",
+		width=>16,
+		exact_width=>'0')
+	PORT MAP(clock=>Net_48,
+		capture=>zero,
+		count=>one,
+		reload=>zero,
+		stop=>zero,
+		start=>zero,
+		tr_underflow=>Net_59,
+		tr_compare_match=>Net_49,
+		tr_overflow=>Net_53,
+		line_compl=>Net_55,
+		line=>Net_54,
+		interrupt=>Net_51);
+ServoPositionControl:cy_mxs40_gpio_v1_0
+	GENERIC MAP(cy_registers=>"",
+		width=>1,
+		sio_grp_cnt=>0,
+		id=>"804a6163-e7df-43bb-8f52-1f9379b086bc",
+		drive_mode=>"6",
+		ibuf_enabled=>"0",
+		init_dr_st=>"1",
+		input_sync=>"0",
+		intr_mode=>"0",
+		io_voltage=>"",
+		output_conn=>"1",
+		oe_conn=>"0",
+		output_sync=>"0",
+		oe_sync=>"0",
+		drive_strength=>"0",
+		max_frequency=>"100",
+		output_current_cap=>"8",
+		i2c_mode=>"0",
+		pin_aliases=>"",
+		pin_mode=>"O",
+		slew_rate=>"0",
+		vtrip=>"0",
+		use_annotation=>"0",
+		hotswap_needed=>"0")
+	PORT MAP(oe=>(one),
+		y=>Net_54,
+		fb=>(tmpFB_0__ServoPositionControl_net_0),
+		analog=>(open),
+		io=>(tmpIO_0__ServoPositionControl_net_0),
+		annotation=>(open),
+		siovref=>(tmpSIOVREF__ServoPositionControl_net_0));
+ServoClock:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"f4d3ea47-120b-45ff-bc68-193a0c374441",
+		source_clock_id=>"2FB4EC85-8328-4C5A-9ED9-8B63060178EB",
+		divisor=>0,
+		period=>"1000000000",
+		is_direct=>'0',
+		is_digital=>'0')
+	PORT MAP(clock_out=>Net_48,
+		dig_domain_out=>open);
+\LidarMotorControl:TCPWM\:cy_mxs40_tcpwm_v1_0
+	GENERIC MAP(cy_registers=>"",
+		width=>16,
+		exact_width=>'0')
+	PORT MAP(clock=>Net_68,
+		capture=>zero,
+		count=>one,
+		reload=>zero,
+		stop=>zero,
+		start=>zero,
+		tr_underflow=>Net_79,
+		tr_compare_match=>Net_69,
+		tr_overflow=>Net_73,
+		line_compl=>Net_75,
+		line=>Net_74,
+		interrupt=>Net_71);
+LidarMotorSpeed:cy_mxs40_gpio_v1_0
+	GENERIC MAP(cy_registers=>"",
+		width=>1,
+		sio_grp_cnt=>0,
+		id=>"09d1fce1-d3cf-4212-b7b1-199151744efb",
+		drive_mode=>"6",
+		ibuf_enabled=>"0",
+		init_dr_st=>"1",
+		input_sync=>"0",
+		intr_mode=>"0",
+		io_voltage=>"",
+		output_conn=>"1",
+		oe_conn=>"0",
+		output_sync=>"0",
+		oe_sync=>"0",
+		drive_strength=>"0",
+		max_frequency=>"100",
+		output_current_cap=>"8",
+		i2c_mode=>"0",
+		pin_aliases=>"",
+		pin_mode=>"O",
+		slew_rate=>"0",
+		vtrip=>"0",
+		use_annotation=>"0",
+		hotswap_needed=>"0")
+	PORT MAP(oe=>(one),
+		y=>Net_74,
+		fb=>(tmpFB_0__LidarMotorSpeed_net_0),
+		analog=>(open),
+		io=>(tmpIO_0__LidarMotorSpeed_net_0),
+		annotation=>(open),
+		siovref=>(tmpSIOVREF__LidarMotorSpeed_net_0));
+LidarMotorClock:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"27180a7a-a17a-4c35-924f-7f43bd7a01e2",
+		source_clock_id=>"2FB4EC85-8328-4C5A-9ED9-8B63060178EB",
+		divisor=>0,
+		period=>"1000000000",
+		is_direct=>'0',
+		is_digital=>'0')
+	PORT MAP(clock_out=>Net_68,
+		dig_domain_out=>open);
+DirectionInput1:cy_mxs40_gpio_v1_0
+	GENERIC MAP(cy_registers=>"",
+		width=>1,
+		sio_grp_cnt=>0,
+		id=>"bbac44e0-edfd-4b7e-857b-f6e054dbf8dd",
+		drive_mode=>"6",
+		ibuf_enabled=>"0",
+		init_dr_st=>"0",
+		input_sync=>"0",
+		intr_mode=>"0",
+		io_voltage=>"",
+		output_conn=>"0",
+		oe_conn=>"0",
+		output_sync=>"0",
+		oe_sync=>"0",
+		drive_strength=>"0",
+		max_frequency=>"100",
+		output_current_cap=>"8",
+		i2c_mode=>"0",
+		pin_aliases=>"",
+		pin_mode=>"O",
+		slew_rate=>"0",
+		vtrip=>"0",
+		use_annotation=>"0",
+		hotswap_needed=>"0")
+	PORT MAP(oe=>(one),
+		y=>(zero),
+		fb=>(tmpFB_0__DirectionInput1_net_0),
+		analog=>(open),
+		io=>(tmpIO_0__DirectionInput1_net_0),
+		annotation=>(open),
+		siovref=>(tmpSIOVREF__DirectionInput1_net_0));
+DirectionInput2:cy_mxs40_gpio_v1_0
+	GENERIC MAP(cy_registers=>"",
+		width=>1,
+		sio_grp_cnt=>0,
+		id=>"16a4d1a6-cd4c-4440-bac0-ac8aa385f1ae",
+		drive_mode=>"6",
+		ibuf_enabled=>"0",
+		init_dr_st=>"0",
+		input_sync=>"0",
+		intr_mode=>"0",
+		io_voltage=>"",
+		output_conn=>"0",
+		oe_conn=>"0",
+		output_sync=>"0",
+		oe_sync=>"0",
+		drive_strength=>"0",
+		max_frequency=>"100",
+		output_current_cap=>"8",
+		i2c_mode=>"0",
+		pin_aliases=>"",
+		pin_mode=>"O",
+		slew_rate=>"0",
+		vtrip=>"0",
+		use_annotation=>"0",
+		hotswap_needed=>"0")
+	PORT MAP(oe=>(one),
+		y=>(zero),
+		fb=>(tmpFB_0__DirectionInput2_net_0),
+		analog=>(open),
+		io=>(tmpIO_0__DirectionInput2_net_0),
+		annotation=>(open),
+		siovref=>(tmpSIOVREF__DirectionInput2_net_0));
+\ExternalUart:SCBCLK\:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"c6ef178d-afc2-489d-b511-df57104978db/b68e5b9d-7828-482d-a282-930f990e3b3e",
+		source_clock_id=>"",
+		divisor=>0,
+		period=>"723379629.62963",
+		is_direct=>'0',
+		is_digital=>'0')
+	PORT MAP(clock_out=>\ExternalUart:Net_847\,
+		dig_domain_out=>open);
+\ExternalUart:tx\:cy_mxs40_gpio_v1_0
+	GENERIC MAP(cy_registers=>"",
+		width=>1,
+		sio_grp_cnt=>0,
+		id=>"c6ef178d-afc2-489d-b511-df57104978db/65f3af6c-759b-4ccb-8c66-5c95ba1f5f4f",
+		drive_mode=>"6",
+		ibuf_enabled=>"0",
+		init_dr_st=>"1",
+		input_sync=>"0",
+		intr_mode=>"0",
+		io_voltage=>"",
+		output_conn=>"1",
+		oe_conn=>"0",
+		output_sync=>"0",
+		oe_sync=>"0",
+		drive_strength=>"0",
+		max_frequency=>"100",
+		output_current_cap=>"8",
+		i2c_mode=>"0",
+		pin_aliases=>"",
+		pin_mode=>"O",
+		slew_rate=>"0",
+		vtrip=>"0",
+		use_annotation=>"0",
+		hotswap_needed=>"0")
+	PORT MAP(oe=>(one),
+		y=>\ExternalUart:tx_wire\,
+		fb=>(\ExternalUart:tmpFB_0__tx_net_0\),
+		analog=>(open),
+		io=>(\ExternalUart:tmpIO_0__tx_net_0\),
+		annotation=>(open),
+		siovref=>(\ExternalUart:tmpSIOVREF__tx_net_0\));
+\ExternalUart:rx\:cy_mxs40_gpio_v1_0
+	GENERIC MAP(cy_registers=>"",
+		width=>1,
+		sio_grp_cnt=>0,
+		id=>"c6ef178d-afc2-489d-b511-df57104978db/b7e8018e-1ef7-49c0-b5a5-61641a03e31c",
+		drive_mode=>"0",
+		ibuf_enabled=>"1",
+		init_dr_st=>"1",
+		input_sync=>"0",
+		intr_mode=>"0",
+		io_voltage=>"",
+		output_conn=>"0",
+		oe_conn=>"0",
+		output_sync=>"0",
+		oe_sync=>"0",
+		drive_strength=>"0",
+		max_frequency=>"100",
+		output_current_cap=>"8",
+		i2c_mode=>"0",
+		pin_aliases=>"",
+		pin_mode=>"I",
+		slew_rate=>"0",
+		vtrip=>"0",
+		use_annotation=>"0",
+		hotswap_needed=>"0")
+	PORT MAP(oe=>(one),
+		y=>(zero),
+		fb=>\ExternalUart:Net_1172\,
+		analog=>(open),
+		io=>(\ExternalUart:tmpIO_0__rx_net_0\),
+		annotation=>(open),
+		siovref=>(\ExternalUart:tmpSIOVREF__rx_net_0\));
+\ExternalUart:SCB_IRQ\:cy_mxs40_isr_v1_0
+	GENERIC MAP(cy_registers=>"",
+		deepsleep_required=>'0',
+		int_type=>"10")
+	PORT MAP(int_signal=>\ExternalUart:intr_wire\);
+\ExternalUart:SCB\:cy_mxs40_scb_v1_10
+	GENERIC MAP(cy_registers=>"",
+		requires_io_preconfigure=>'0',
+		mode=>2,
+		master=>'0')
+	PORT MAP(clock=>\ExternalUart:Net_847\,
+		uart_rx=>\ExternalUart:Net_1172\,
+		uart_tx=>\ExternalUart:tx_wire\,
+		uart_rts=>\ExternalUart:rts_wire\,
+		uart_cts=>zero,
+		uart_tx_en=>\ExternalUart:tx_en_wire\,
+		i2c_scl=>\ExternalUart:Net_145\,
+		i2c_sda=>\ExternalUart:Net_146\,
+		spi_clk_m=>\ExternalUart:Net_154\,
+		spi_clk_s=>zero,
+		spi_select_m=>(\ExternalUart:Net_155_3\, \ExternalUart:Net_155_2\, \ExternalUart:Net_155_1\, \ExternalUart:Net_155_0\),
+		spi_select_s=>zero,
+		spi_mosi_m=>\ExternalUart:Net_156\,
+		spi_miso_m=>zero,
+		spi_mosi_s=>zero,
+		spi_miso_s=>\ExternalUart:Net_157\,
+		interrupt=>\ExternalUart:intr_wire\,
+		tr_tx_req=>Net_95,
+		tr_rx_req=>Net_94,
+		tr_i2c_scl_filtered=>\ExternalUart:Net_161\);
+\LidarUart:SCBCLK\:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"10d91798-5b0a-4a64-84a4-46d49bb925a6/b68e5b9d-7828-482d-a282-930f990e3b3e",
+		source_clock_id=>"",
+		divisor=>0,
+		period=>"723379629.62963",
+		is_direct=>'0',
+		is_digital=>'0')
+	PORT MAP(clock_out=>\LidarUart:Net_847\,
+		dig_domain_out=>open);
+\LidarUart:tx\:cy_mxs40_gpio_v1_0
+	GENERIC MAP(cy_registers=>"",
+		width=>1,
+		sio_grp_cnt=>0,
+		id=>"10d91798-5b0a-4a64-84a4-46d49bb925a6/65f3af6c-759b-4ccb-8c66-5c95ba1f5f4f",
+		drive_mode=>"6",
+		ibuf_enabled=>"0",
+		init_dr_st=>"1",
+		input_sync=>"0",
+		intr_mode=>"0",
+		io_voltage=>"",
+		output_conn=>"1",
+		oe_conn=>"0",
+		output_sync=>"0",
+		oe_sync=>"0",
+		drive_strength=>"0",
+		max_frequency=>"100",
+		output_current_cap=>"8",
+		i2c_mode=>"0",
+		pin_aliases=>"",
+		pin_mode=>"O",
+		slew_rate=>"0",
+		vtrip=>"0",
+		use_annotation=>"0",
+		hotswap_needed=>"0")
+	PORT MAP(oe=>(one),
+		y=>\LidarUart:tx_wire\,
+		fb=>(\LidarUart:tmpFB_0__tx_net_0\),
+		analog=>(open),
+		io=>(\LidarUart:tmpIO_0__tx_net_0\),
+		annotation=>(open),
+		siovref=>(\LidarUart:tmpSIOVREF__tx_net_0\));
+\LidarUart:rx\:cy_mxs40_gpio_v1_0
+	GENERIC MAP(cy_registers=>"",
+		width=>1,
+		sio_grp_cnt=>0,
+		id=>"10d91798-5b0a-4a64-84a4-46d49bb925a6/b7e8018e-1ef7-49c0-b5a5-61641a03e31c",
+		drive_mode=>"0",
+		ibuf_enabled=>"1",
+		init_dr_st=>"1",
+		input_sync=>"0",
+		intr_mode=>"0",
+		io_voltage=>"",
+		output_conn=>"0",
+		oe_conn=>"0",
+		output_sync=>"0",
+		oe_sync=>"0",
+		drive_strength=>"0",
+		max_frequency=>"100",
+		output_current_cap=>"8",
+		i2c_mode=>"0",
+		pin_aliases=>"",
+		pin_mode=>"I",
+		slew_rate=>"0",
+		vtrip=>"0",
+		use_annotation=>"0",
+		hotswap_needed=>"0")
+	PORT MAP(oe=>(one),
+		y=>(zero),
+		fb=>\LidarUart:Net_1172\,
+		analog=>(open),
+		io=>(\LidarUart:tmpIO_0__rx_net_0\),
+		annotation=>(open),
+		siovref=>(\LidarUart:tmpSIOVREF__rx_net_0\));
+\LidarUart:SCB_IRQ\:cy_mxs40_isr_v1_0
+	GENERIC MAP(cy_registers=>"",
+		deepsleep_required=>'0',
+		int_type=>"10")
+	PORT MAP(int_signal=>\LidarUart:intr_wire\);
+\LidarUart:SCB\:cy_mxs40_scb_v1_10
+	GENERIC MAP(cy_registers=>"",
+		requires_io_preconfigure=>'0',
+		mode=>2,
+		master=>'0')
+	PORT MAP(clock=>\LidarUart:Net_847\,
+		uart_rx=>\LidarUart:Net_1172\,
+		uart_tx=>\LidarUart:tx_wire\,
+		uart_rts=>\LidarUart:rts_wire\,
+		uart_cts=>zero,
+		uart_tx_en=>\LidarUart:tx_en_wire\,
+		i2c_scl=>\LidarUart:Net_145\,
+		i2c_sda=>\LidarUart:Net_146\,
+		spi_clk_m=>\LidarUart:Net_154\,
+		spi_clk_s=>zero,
+		spi_select_m=>(\LidarUart:Net_155_3\, \LidarUart:Net_155_2\, \LidarUart:Net_155_1\, \LidarUart:Net_155_0\),
+		spi_select_s=>zero,
+		spi_mosi_m=>\LidarUart:Net_156\,
+		spi_miso_m=>zero,
+		spi_mosi_s=>zero,
+		spi_miso_s=>\LidarUart:Net_157\,
+		interrupt=>\LidarUart:intr_wire\,
+		tr_tx_req=>Net_105,
+		tr_rx_req=>Net_104,
+		tr_i2c_scl_filtered=>\LidarUart:Net_161\);
+
+END R_T_L;

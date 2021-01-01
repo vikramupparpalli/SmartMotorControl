@@ -1,0 +1,8 @@
+D:\MotorControl\SmartMotorControl\MotorControl\SmartMotorControl.cydsn\SmartMotorControl.cyprj|41fd6e6b-e61b-4799-b8d1-8983ea52e376
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|429977ba-636f-437a-a536-6b952825f01a
+C:\Users\15026\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|c56cb4bd-22d2-4ec5-b350-9cb390e49e3e
+C:\Users\15026\Documents\PSoC Creator\4.3\Downloads ( 4.3).cylib\Downloads ( 4.3).cyprj|9804b35d-a302-4316-88e5-722aabe1fe16
+C:\Users\15026\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|2421176e-6ce7-4120-9d7b-02e3b76a559b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|263e9378-bafe-4543-9a3a-68cc027e5656
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|3fb68005-c57e-4ae9-9e45-5156ed7d7d04
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|014b32ca-be1b-42fe-8608-8bf8f1f43696
