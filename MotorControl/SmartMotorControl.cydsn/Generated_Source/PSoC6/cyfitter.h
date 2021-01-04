@@ -32,18 +32,18 @@
 #define LidarUart_SCB__SS1_POSITION 1u
 #define LidarUart_SCB__SS2_POSITION 2u
 #define LidarUart_SCB__SS3_POSITION 3u
-#define LidarUart_SCBCLK__DIV_IDX 0
-#define LidarUart_SCBCLK__DIV_NUM 0
+#define LidarUart_SCBCLK__DIV_IDX 1
+#define LidarUart_SCBCLK__DIV_NUM 1
 #define LidarUart_SCBCLK__DIV_TYPE CY_SYSCLK_DIV_8_BIT
 
 /* ServoClock */
-#define ServoClock__DIV_IDX 4
-#define ServoClock__DIV_NUM 4
+#define ServoClock__DIV_IDX 0
+#define ServoClock__DIV_NUM 0
 #define ServoClock__DIV_TYPE CY_SYSCLK_DIV_8_BIT
 
 /* SpeedClock */
-#define SpeedClock__DIV_IDX 2
-#define SpeedClock__DIV_NUM 2
+#define SpeedClock__DIV_IDX 3
+#define SpeedClock__DIV_NUM 3
 #define SpeedClock__DIV_TYPE CY_SYSCLK_DIV_8_BIT
 
 /* ExternalUart */
@@ -53,13 +53,13 @@
 #define ExternalUart_SCB__SS1_POSITION 1u
 #define ExternalUart_SCB__SS2_POSITION 2u
 #define ExternalUart_SCB__SS3_POSITION 3u
-#define ExternalUart_SCBCLK__DIV_IDX 1
-#define ExternalUart_SCBCLK__DIV_NUM 1
+#define ExternalUart_SCBCLK__DIV_IDX 2
+#define ExternalUart_SCBCLK__DIV_NUM 2
 #define ExternalUart_SCBCLK__DIV_TYPE CY_SYSCLK_DIV_8_BIT
 
 /* ServoControl */
-#define ServoControl_TCPWM__CNT_HW TCPWM0_CNT2
-#define ServoControl_TCPWM__CNT_IDX 2u
+#define ServoControl_TCPWM__CNT_HW TCPWM0_CNT6
+#define ServoControl_TCPWM__CNT_IDX 6u
 #define ServoControl_TCPWM__HW TCPWM0
 #define ServoControl_TCPWM__IDX 0u
 
@@ -70,8 +70,8 @@
 #define PeriodicTimer_TCPWM__IDX 0u
 
 /* LidarMotorClock */
-#define LidarMotorClock__DIV_IDX 3
-#define LidarMotorClock__DIV_NUM 3
+#define LidarMotorClock__DIV_IDX 4
+#define LidarMotorClock__DIV_NUM 4
 #define LidarMotorClock__DIV_TYPE CY_SYSCLK_DIV_8_BIT
 
 /* LidarMotorControl */

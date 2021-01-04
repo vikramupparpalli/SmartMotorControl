@@ -13,11 +13,12 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="MotorControl\SmartMotorControl\Generated_Source">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>MotorControl</v>
 <v>MotorControl\SmartMotorControl</v>
 <v>MotorControl\SmartMotorControl\TopDesign</v>
+<v>MotorControl\SmartMotorControl\SmartMotorControl.cydwr</v>
 <v>MotorControl\SmartMotorControl\SmartMotorControl.cydwr\Pins</v>
 <v>MotorControl\SmartMotorControl\SmartMotorControl.cydwr\Analog</v>
 <v>MotorControl\SmartMotorControl\SmartMotorControl.cydwr\DMA</v>
@@ -41,6 +42,7 @@
 <v>MotorControl\SmartMotorControl\CM0p (Core 0)\Source Files\ARM MDK Generic\startup_psoc6_01_cm0plus.s</v>
 <v>MotorControl\SmartMotorControl\CM0p (Core 0)\Source Files\main_cm0p.c</v>
 <v>MotorControl\SmartMotorControl\CM0p (Core 0)\Source Files\system_psoc6_cm0plus.c</v>
+<v>MotorControl\SmartMotorControl\CM4 (Core 1)</v>
 <v>MotorControl\SmartMotorControl\CM4 (Core 1)\ARM GCC Generic</v>
 <v>MotorControl\SmartMotorControl\CM4 (Core 1)\ARM GCC Generic\cy8c6xx7_cm4_dual.ld</v>
 <v>MotorControl\SmartMotorControl\CM4 (Core 1)\ARM IAR Generic</v>
@@ -48,6 +50,7 @@
 <v>MotorControl\SmartMotorControl\CM4 (Core 1)\ARM MDK Generic</v>
 <v>MotorControl\SmartMotorControl\CM4 (Core 1)\ARM MDK Generic\cy8c6xx7_cm4_dual.scat</v>
 <v>MotorControl\SmartMotorControl\CM4 (Core 1)\Header Files</v>
+<v>MotorControl\SmartMotorControl\CM4 (Core 1)\Source Files</v>
 <v>MotorControl\SmartMotorControl\CM4 (Core 1)\Source Files\ARM GCC Generic</v>
 <v>MotorControl\SmartMotorControl\CM4 (Core 1)\Source Files\ARM GCC Generic\startup_psoc6_01_cm4.S</v>
 <v>MotorControl\SmartMotorControl\CM4 (Core 1)\Source Files\ARM IAR Generic</v>
@@ -66,8 +69,31 @@
 <v>MotorControl\SmartMotorControl</v>
 <v>MotorControl\SmartMotorControl\TopDesign</v>
 <v>MotorControl\SmartMotorControl\SmartMotorControl.cydwr</v>
+<v>MotorControl\SmartMotorControl\SmartMotorControl.cydwr\Pins</v>
+<v>MotorControl\SmartMotorControl\SmartMotorControl.cydwr\Analog</v>
+<v>MotorControl\SmartMotorControl\SmartMotorControl.cydwr\DMA</v>
+<v>MotorControl\SmartMotorControl\SmartMotorControl.cydwr\Clocks</v>
+<v>MotorControl\SmartMotorControl\SmartMotorControl.cydwr\Interrupts</v>
+<v>MotorControl\SmartMotorControl\SmartMotorControl.cydwr\System</v>
+<v>MotorControl\SmartMotorControl\SmartMotorControl.cydwr\Directives</v>
 <v>MotorControl\SmartMotorControl\CM0p (Core 0)</v>
 <v>MotorControl\SmartMotorControl\CM4 (Core 1)</v>
+<v>MotorControl\SmartMotorControl\CM4 (Core 1)\ARM GCC Generic</v>
+<v>MotorControl\SmartMotorControl\CM4 (Core 1)\ARM GCC Generic\cy8c6xx7_cm4_dual.ld</v>
+<v>MotorControl\SmartMotorControl\CM4 (Core 1)\ARM IAR Generic</v>
+<v>MotorControl\SmartMotorControl\CM4 (Core 1)\ARM IAR Generic\cy8c6xx7_cm4_dual.icf</v>
+<v>MotorControl\SmartMotorControl\CM4 (Core 1)\ARM MDK Generic</v>
+<v>MotorControl\SmartMotorControl\CM4 (Core 1)\ARM MDK Generic\cy8c6xx7_cm4_dual.scat</v>
+<v>MotorControl\SmartMotorControl\CM4 (Core 1)\Header Files</v>
+<v>MotorControl\SmartMotorControl\CM4 (Core 1)\Source Files</v>
+<v>MotorControl\SmartMotorControl\CM4 (Core 1)\Source Files\ARM GCC Generic</v>
+<v>MotorControl\SmartMotorControl\CM4 (Core 1)\Source Files\ARM GCC Generic\startup_psoc6_01_cm4.S</v>
+<v>MotorControl\SmartMotorControl\CM4 (Core 1)\Source Files\ARM IAR Generic</v>
+<v>MotorControl\SmartMotorControl\CM4 (Core 1)\Source Files\ARM IAR Generic\startup_psoc6_01_cm4.s</v>
+<v>MotorControl\SmartMotorControl\CM4 (Core 1)\Source Files\ARM MDK Generic</v>
+<v>MotorControl\SmartMotorControl\CM4 (Core 1)\Source Files\ARM MDK Generic\startup_psoc6_01_cm4.s</v>
+<v>MotorControl\SmartMotorControl\CM4 (Core 1)\Source Files\main_cm4.c</v>
+<v>MotorControl\SmartMotorControl\CM4 (Core 1)\Source Files\system_psoc6_cm4.c</v>
 <v>MotorControl\SmartMotorControl\Shared Files</v>
 <v>MotorControl\SmartMotorControl\Generated_Source</v>
 </VisibleNodeIds>
@@ -192,6 +218,49 @@
 <VisibleNodeIds>
 <v>MotorControl</v>
 <v>MotorControl\SmartMotorControl</v>
+<v>MotorControl\SmartMotorControl\CortexM0p</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_device.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_drv.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_pipe.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_sema.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_lvd.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_profile.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_prot.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_common.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_ezi2c.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_i2c.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_spi.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_uart.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysanalog.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysclk.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysint.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syslib.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syslib_gcc.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syspm.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_systick.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_tcpwm_counter.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_tcpwm_pwm.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_tcpwm_quaddec.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_trigmux.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_wdt.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\ExternalUart.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\LidarMotorControl.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\LidarUart.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\main_cm0p.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\MotorSpeedControl.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\PeriodicTimer.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\retarget.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\ServoControl.lst</v>
+<v>MotorControl\SmartMotorControl\CortexM0p\ARM_GCC_541\Debug\Listing Files\startup_psoc6_01_cm0plus.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -199,7 +268,7 @@
 <v>Datasheet</v>
 </TreeKeysV2>
 <TreeStatesV2>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="MotorControl">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>MotorControl</v>
 <v>MotorControl\SmartMotorControl</v>
@@ -245,25 +314,14 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs>
-<name v=".\SmartMotorControl.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\SmartMotorControl.cydsn\SmartMotorControl.cydwr" />
-<name v=".\SmartMotorControl.cydsn\main_cm4.c" />
-<name v=".\SmartMotorControl.cydsn\Generated_Source\PSoC6\MotorSpeedControl.c" />
-<name v=".\SmartMotorControl.cydsn\Generated_Source\PSoC6\MotorSpeedControl.h" />
-<name v=".\SmartMotorControl.cydsn\stdio_user.h" />
-<name v=".\SmartMotorControl.cydsn\Generated_Source\PSoC6\project.h" />
-<name v=".\SmartMotorControl.cydsn\Generated_Source\PSoC6\ExternalUart.h" />
-<name v=".\SmartMotorControl.cydsn\Generated_Source\PSoC6\PeriodicTimer.c" />
-<name v=".\SmartMotorControl.cydsn\Generated_Source\PSoC6\PeriodicTimer.h" />
-</OpenDocs>
+<OpenDocs />
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
   Actipro Docking/MDI for WinForms
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1149, 715" SelectedTabbedMdiWindow="74ed1a60-4305-481d-b6d9-9fd7aa23e1b6"><DocumentWindow Key="D:\MotorControl\MotorControl\SmartMotorControl.cydsn\TopDesign\TopDesign.cysch" Guid="167d4f34-6003-42fd-b578-4f5e73c3e516" /><DocumentWindow Key="D:\MotorControl\MotorControl\SmartMotorControl.cydsn\SmartMotorControl.cydwr" Guid="5225b44e-78f3-41a5-8bea-dfb708045357" /><DocumentWindow Key="D:\MotorControl\MotorControl\SmartMotorControl.cydsn\main_cm4.c" Guid="74ed1a60-4305-481d-b6d9-9fd7aa23e1b6" /><DocumentWindow Key="D:\MotorControl\MotorControl\SmartMotorControl.cydsn\Generated_Source\PSoC6\MotorSpeedControl.c" Guid="7db46b94-5256-4670-b48a-58ae0e7c4c13" /><DocumentWindow Key="D:\MotorControl\MotorControl\SmartMotorControl.cydsn\Generated_Source\PSoC6\MotorSpeedControl.h" Guid="9cd16dd1-ceee-4eae-9a07-40e01ffe856e" /><DocumentWindow Key="D:\MotorControl\MotorControl\SmartMotorControl.cydsn\stdio_user.h" Guid="2d57a589-f466-496d-b46f-07e6a6e46d5d" /><DocumentWindow Key="D:\MotorControl\MotorControl\SmartMotorControl.cydsn\Generated_Source\PSoC6\project.h" Guid="0af7ed1b-b7c1-42f4-9b5b-324df3fe8195" /><DocumentWindow Key="D:\MotorControl\MotorControl\SmartMotorControl.cydsn\Generated_Source\PSoC6\ExternalUart.h" Guid="8ecc334d-c698-4e55-a4c4-8a3aafa96ed8" /><DocumentWindow Key="D:\MotorControl\MotorControl\SmartMotorControl.cydsn\Generated_Source\PSoC6\PeriodicTimer.c" Guid="1f57271b-0b55-425f-9ad6-2193b22bb2e6" /><DocumentWindow Key="D:\MotorControl\MotorControl\SmartMotorControl.cydsn\Generated_Source\PSoC6\PeriodicTimer.h" Guid="369e0781-3660-4d2f-83c3-278b0e2661a9" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="0a0707e6-09ea-4a54-92b4-fd334e8b117b" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1403, 715" SelectedTabbedMdiWindow="0a0707e6-09ea-4a54-92b4-fd334e8b117b"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="0a0707e6-09ea-4a54-92b4-fd334e8b117b" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

@@ -1,5 +1,5 @@
 # SmartMotorControl
-# 2021-01-01 19:13:00Z
+# 2021-01-04 18:48:59Z
 
 dont_use_location BLE -1 -1 0
 dont_use_location p4blecell -1 -1 0
@@ -7,8 +7,8 @@ set_location "ClockGenBlock" CLK_GEN -1 -1 0
 set_io "CY_CPUSS_SWJ_SWCLK_TCLK(0)" iocell 6 7
 set_io "CY_CPUSS_SWJ_SWDIO_TMS(0)" iocell 6 6
 set_io "DcMotorSpeed(0)" iocell 9 0
-set_io "ServoPositionControl(0)" iocell 8 4
-set_io "LidarMotorSpeed(0)" iocell 8 2
+set_io "ServoPositionControl(0)" iocell 10 0
+set_io "LidarMotorSpeed(0)" iocell 10 6
 set_io "DirectionInput1(0)" iocell 9 1
 set_io "DirectionInput2(0)" iocell 9 2
 set_io "\ExternalUart:tx(0)\" iocell 5 1

@@ -179,8 +179,8 @@
 #define LidarMotorSpeed_0_INIT_MUXSEL 8u
 #define LidarMotorSpeed_0_INPUT_SYNC 2u
 #define LidarMotorSpeed_0_INTERRUPT_MODE CY_GPIO_INTR_DISABLE
-#define LidarMotorSpeed_0_NUM 2u
-#define LidarMotorSpeed_0_PORT GPIO_PRT8
+#define LidarMotorSpeed_0_NUM 6u
+#define LidarMotorSpeed_0_PORT GPIO_PRT10
 #define LidarMotorSpeed_0_SLEWRATE CY_GPIO_SLEW_FAST
 #define LidarMotorSpeed_0_THRESHOLD_LEVEL CY_GPIO_VTRIP_CMOS
 #define LidarMotorSpeed_DRIVEMODE CY_GPIO_DM_STRONG_IN_OFF
@@ -189,8 +189,8 @@
 #define LidarMotorSpeed_INIT_MUXSEL 8u
 #define LidarMotorSpeed_INPUT_SYNC 2u
 #define LidarMotorSpeed_INTERRUPT_MODE CY_GPIO_INTR_DISABLE
-#define LidarMotorSpeed_NUM 2u
-#define LidarMotorSpeed_PORT GPIO_PRT8
+#define LidarMotorSpeed_NUM 6u
+#define LidarMotorSpeed_PORT GPIO_PRT10
 #define LidarMotorSpeed_SLEWRATE CY_GPIO_SLEW_FAST
 #define LidarMotorSpeed_THRESHOLD_LEVEL CY_GPIO_VTRIP_CMOS
 
@@ -201,8 +201,8 @@
 #define ServoPositionControl_0_INIT_MUXSEL 8u
 #define ServoPositionControl_0_INPUT_SYNC 2u
 #define ServoPositionControl_0_INTERRUPT_MODE CY_GPIO_INTR_DISABLE
-#define ServoPositionControl_0_NUM 4u
-#define ServoPositionControl_0_PORT GPIO_PRT8
+#define ServoPositionControl_0_NUM 0u
+#define ServoPositionControl_0_PORT GPIO_PRT10
 #define ServoPositionControl_0_SLEWRATE CY_GPIO_SLEW_FAST
 #define ServoPositionControl_0_THRESHOLD_LEVEL CY_GPIO_VTRIP_CMOS
 #define ServoPositionControl_DRIVEMODE CY_GPIO_DM_STRONG_IN_OFF
@@ -211,8 +211,8 @@
 #define ServoPositionControl_INIT_MUXSEL 8u
 #define ServoPositionControl_INPUT_SYNC 2u
 #define ServoPositionControl_INTERRUPT_MODE CY_GPIO_INTR_DISABLE
-#define ServoPositionControl_NUM 4u
-#define ServoPositionControl_PORT GPIO_PRT8
+#define ServoPositionControl_NUM 0u
+#define ServoPositionControl_PORT GPIO_PRT10
 #define ServoPositionControl_SLEWRATE CY_GPIO_SLEW_FAST
 #define ServoPositionControl_THRESHOLD_LEVEL CY_GPIO_VTRIP_CMOS
 

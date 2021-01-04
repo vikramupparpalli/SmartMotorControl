@@ -30,7 +30,7 @@ Clock: CyPeriClk_App        | N/A  | Target: 50.00 MHz   |
 Clock: ExternalUart_SCBCLK  | N/A  | Target: 1.39 MHz    | 
 Clock: LidarMotorClock      | N/A  | Target: 1.00 MHz    | 
 Clock: LidarUart_SCBCLK     | N/A  | Target: 1.39 MHz    | 
-Clock: ServoClock           | N/A  | Target: 1.00 MHz    | 
+Clock: ServoClock           | N/A  | Target: 50.00 MHz   | 
 Clock: SpeedClock           | N/A  | Target: 1.00 MHz    | 
 
  =====================================================================

@@ -31,9 +31,30 @@ int main(void)
     Cy_TCPWM_Counter_SetPeriod(PeriodicTimer_HW, PeriodicTimer_CNT_NUM, 0);
     Cy_TCPWM_TriggerReloadOrIndex(PeriodicTimer_HW, PeriodicTimer_CNT_MASK); 
     
+    uint32_t compare = 4320;
+    bool countUp = true;
+    
+    ServoControl_Start();
+    
+    LidarMotorControl_Start();
+    
+    Cy_TCPWM_PWM_SetCompare0(LidarMotorControl_HW, LidarMotorControl_CNT_NUM, 50);
+        
     for(;;)
     {
-
+        Cy_TCPWM_PWM_SetCompare0(ServoControl_HW, ServoControl_CNT_NUM, compare);
+        if(countUp == true)
+        {
+            compare = (compare + 24);
+            if(compare > 4560) {countUp = false;}
+        }
+        else
+        {
+            compare = (compare - 24);
+            if(compare < 100) {countUp = true;}
+        }
+        
+        CyDelay(25);
     }
 }
 

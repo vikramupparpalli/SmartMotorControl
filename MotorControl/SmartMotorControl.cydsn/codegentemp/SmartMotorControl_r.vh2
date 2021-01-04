@@ -1,5 +1,5 @@
 -- Project:   SmartMotorControl
--- Generated: 01/01/2021 14:13:00
+-- Generated: 01/04/2021 13:48:59
 -- PSoC Creator  4.4
 
 ENTITY SmartMotorControl IS
@@ -65,20 +65,20 @@ ARCHITECTURE __DEFAULT__ OF SmartMotorControl IS
     SIGNAL Net_39 : bit;
     SIGNAL Net_40 : bit;
     SIGNAL Net_41 : bit;
-    SIGNAL Net_42_ff11 : bit;
-    ATTRIBUTE global_signal OF Net_42_ff11 : SIGNAL IS true;
+    SIGNAL Net_42_ff12 : bit;
+    ATTRIBUTE global_signal OF Net_42_ff12 : SIGNAL IS true;
     SIGNAL Net_44 : bit;
     SIGNAL Net_45 : bit;
-    SIGNAL Net_48_ff13 : bit;
-    ATTRIBUTE global_signal OF Net_48_ff13 : SIGNAL IS true;
+    SIGNAL Net_48_ff11 : bit;
+    ATTRIBUTE global_signal OF Net_48_ff11 : SIGNAL IS true;
     SIGNAL Net_49 : bit;
     SIGNAL Net_51 : bit;
     SIGNAL Net_53 : bit;
     SIGNAL Net_54 : bit;
     SIGNAL Net_55 : bit;
     SIGNAL Net_59 : bit;
-    SIGNAL Net_68_ff12 : bit;
-    ATTRIBUTE global_signal OF Net_68_ff12 : SIGNAL IS true;
+    SIGNAL Net_68_ff13 : bit;
+    ATTRIBUTE global_signal OF Net_68_ff13 : SIGNAL IS true;
     SIGNAL Net_69 : bit;
     SIGNAL Net_71 : bit;
     SIGNAL Net_73 : bit;
@@ -127,9 +127,9 @@ ARCHITECTURE __DEFAULT__ OF SmartMotorControl IS
     ATTRIBUTE lib_model OF DcMotorSpeed(0) : LABEL IS "iocell3";
     ATTRIBUTE Location OF DcMotorSpeed(0) : LABEL IS "P9[0]";
     ATTRIBUTE lib_model OF ServoPositionControl(0) : LABEL IS "iocell4";
-    ATTRIBUTE Location OF ServoPositionControl(0) : LABEL IS "P8[4]";
+    ATTRIBUTE Location OF ServoPositionControl(0) : LABEL IS "P10[0]";
     ATTRIBUTE lib_model OF LidarMotorSpeed(0) : LABEL IS "iocell5";
-    ATTRIBUTE Location OF LidarMotorSpeed(0) : LABEL IS "P8[2]";
+    ATTRIBUTE Location OF LidarMotorSpeed(0) : LABEL IS "P10[6]";
     ATTRIBUTE lib_model OF DirectionInput1(0) : LABEL IS "iocell6";
     ATTRIBUTE Location OF DirectionInput1(0) : LABEL IS "P9[1]";
     ATTRIBUTE lib_model OF DirectionInput2(0) : LABEL IS "iocell7";
@@ -145,7 +145,7 @@ ARCHITECTURE __DEFAULT__ OF SmartMotorControl IS
     ATTRIBUTE Location OF \PeriodicTimer:TCPWM\ : LABEL IS "F(TCPWM,0)";
     ATTRIBUTE Location OF OneMsInterrupt : LABEL IS "[IntrContainer=(0)][IntrId=(90)]";
     ATTRIBUTE Location OF \MotorSpeedControl:TCPWM\ : LABEL IS "F(TCPWM,4)";
-    ATTRIBUTE Location OF \ServoControl:TCPWM\ : LABEL IS "F(TCPWM,2)";
+    ATTRIBUTE Location OF \ServoControl:TCPWM\ : LABEL IS "F(TCPWM,6)";
     ATTRIBUTE Location OF \LidarMotorControl:TCPWM\ : LABEL IS "F(TCPWM,1)";
     ATTRIBUTE Location OF \ExternalUart:SCB_IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(46)]";
     ATTRIBUTE Location OF \ExternalUart:SCB\ : LABEL IS "F(SCB,5)";
@@ -538,15 +538,16 @@ BEGIN
             ilo => ClockBlock_ILO,
             wco => ClockBlock_WCO,
             lfclk => ClockBlock_LFClk,
+            ff_div_11 => Net_22_ff14,
             ff_div_0 => open,
             ff_div_1 => open,
-            ff_div_11 => Net_22_ff14,
-            ff_div_12 => Net_68_ff12,
-            ff_div_13 => Net_48_ff13,
+            ff_div_12 => Net_68_ff13,
+            ff_div_13 => open,
             ff_div_14 => open,
             ff_div_4 => \LidarUart:Net_847_ff0\,
             ff_div_5 => \ExternalUart:Net_847_ff1\,
-            ff_div_15 => Net_42_ff11,
+            ff_div_15 => Net_42_ff12,
+            ff_div_17 => Net_48_ff11,
             periclk_App => periclk_App);
 
     CPUSS:CPUSS
@@ -1192,7 +1193,7 @@ BEGIN
             exact_width => 0,
             width => 16)
         PORT MAP(
-            clock => Net_42_ff11,
+            clock => Net_42_ff12,
             capture => '0',
             count => '1',
             reload => '0',
@@ -1211,7 +1212,7 @@ BEGIN
             exact_width => 0,
             width => 16)
         PORT MAP(
-            clock => Net_48_ff13,
+            clock => Net_48_ff11,
             capture => '0',
             count => '1',
             reload => '0',
@@ -1230,7 +1231,7 @@ BEGIN
             exact_width => 0,
             width => 16)
         PORT MAP(
-            clock => Net_68_ff12,
+            clock => Net_68_ff13,
             capture => '0',
             count => '1',
             reload => '0',

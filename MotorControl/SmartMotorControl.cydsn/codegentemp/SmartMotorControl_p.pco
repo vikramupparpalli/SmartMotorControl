@@ -1,6 +1,6 @@
 dont_use_location BLE -1 -1 0
 dont_use_location p4blecell -1 -1 0
-set_io "ServoPositionControl(0)" iocell 8 4
+set_io "ServoPositionControl(0)" iocell 10 0
 set_location "\LidarUart:SCB_IRQ\" interrupt -1 -1 45
 set_location "OneMsInterrupt" interrupt -1 -1 90
 set_location "\ExternalUart:SCB_IRQ\" interrupt -1 -1 46
@@ -12,14 +12,14 @@ set_io "\LidarUart:tx(0)\" iocell 8 1
 set_io "\ExternalUart:rx(0)\" iocell 5 0
 set_location "\ExternalUart:SCB\" SCB -1 -1 5
 set_io "\LidarUart:rx(0)\" iocell 8 0
-set_location "\LidarMotorControl:TCPWM\" TCPWM -1 -1 1
+set_location "\MotorSpeedControl:TCPWM\" TCPWM -1 -1 4
 set_io "CY_CPUSS_SWJ_SWCLK_TCLK(0)" iocell 6 7
 set_io "\ExternalUart:tx(0)\" iocell 5 1
-set_io "LidarMotorSpeed(0)" iocell 8 2
-set_location "\ServoControl:TCPWM\" TCPWM -1 -1 2
+set_io "LidarMotorSpeed(0)" iocell 10 6
+set_location "\LidarMotorControl:TCPWM\" TCPWM -1 -1 1
 set_io "CY_CPUSS_SWJ_SWDIO_TMS(0)" iocell 6 6
 set_io "DcMotorSpeed(0)" iocell 9 0
 set_io "DirectionInput1(0)" iocell 9 1
 set_io "DirectionInput2(0)" iocell 9 2
-set_location "\MotorSpeedControl:TCPWM\" TCPWM -1 -1 4
+set_location "\ServoControl:TCPWM\" TCPWM -1 -1 6
 set_location "CPUSS" CPUSS -1 -1 0
